@@ -6,6 +6,13 @@
 
 Este proyecto implementa un sistema básico de Recuperación Aumentada con Generación (RAG) utilizando Google Gemini para embeddings y Pinecone como vector database. El flujo completo se ejecuta dentro de un Jupyter Notebook.
 
+Construir un pipeline RAG funcional que permita:
+
+- Convertir texto en embeddings
+- Guardar embeddings en Pinecone
+- Recuperar información por similitud
+- Preparar el vector store para integrarlo con un modelo generativo
+
 ---
 
 ## Tecnologías utilizadas
@@ -24,23 +31,20 @@ Este proyecto implementa un sistema básico de Recuperación Aumentada con Gener
 Rag-project
 !--RAG_Pinecone.ipynb
 !--README.md
-!---env
+!--.env
 ```
 
 ---
 
 ## Archivo .env
 
-Debes crear un archivo `.env` con el siguiente contenido:
+Se debe crear un archivo `.env` con el siguiente contenido:
 
 ```
 GOOGLE_API_KEY=tu_api_key_de_gemini
 PINECONE_API_KEY=tu_api_key_de_pinecone
 ```
 
-
-
-Este archivo no debe subirse a ningún repositorio.
 
 ---
 
@@ -80,31 +84,7 @@ El notebook incluye las siguientes etapas:
 
 ---
 
-## Objetivo del laboratorio
 
-Construir un pipeline RAG funcional que permita:
-
-- Convertir texto en embeddings
-- Guardar embeddings en Pinecone
-- Recuperar información por similitud
-- Preparar el vector store para integrarlo con un modelo generativo
-
----
-
-## Resultados esperados
-
-- Índice creado correctamente en Pinecone
-- Inserción exitosa de documentos
-- Búsquedas semánticas funcionando
-- Retriever operacional
-
----
-
-## Notas importantes
-
-- El modelo `gemini-embedding-001` genera vectores de dimensión **3072**, por lo que el índice debe crearse con esa dimensión.
-- LangChain está en su versión moderna, por lo que los imports son compatibles con los cambios recientes.
-- Las credenciales deben mantenerse fuera del código fuente.
 
 ---
 ### Julian Santiago Cardenas Cubaque
